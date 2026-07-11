@@ -157,7 +157,7 @@ export default function Contact() {
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
         {/* PART 1 — CTA Banner */}
         <div className="rounded-2xl bg-gradient-to-r from-[#061428] via-[#07111a] to-[#061428] p-10 text-center shadow-glow">
-          <h2 className="text-3xl font-semibold text-white sm:text-4xl">Ready to Reclaim 20 Hours Per Week?</h2>
+          <h2 className="text-3xl font-semibold text-white sm:text-4xl [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]">Ready to Reclaim 20 Hours Per Week?</h2>
           <p className="mt-4 max-w-3xl mx-auto text-base leading-7 text-white/85">Book a free 30-minute AI Audit. We will identify exactly where your business is leaking time and money, and show you what we would automate.</p>
 
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
