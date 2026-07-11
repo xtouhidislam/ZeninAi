@@ -51,7 +51,7 @@ export default function CaseStudies() {
             <article
               key={caseStudy.industry}
               data-reveal-item
-              className="group overflow-hidden rounded-[2rem] border border-white/10 bg-surface/90 p-8 shadow-glow transition-transform duration-300 hover:-translate-y-1 hover:border-accent/30"
+              className="glass-panel group overflow-hidden rounded-[2rem] p-8 transition-transform duration-300 hover:-translate-y-1 hover:border-accent/30"
             >
               <div className="flex items-center justify-between gap-4">
                 <span className="rounded-full bg-accent/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-accent">

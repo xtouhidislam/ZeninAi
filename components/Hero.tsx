@@ -2,24 +2,27 @@
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-background text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(242,135,46,0.15),_transparent_32%),radial-gradient(circle_at_bottom_right,_rgba(250,156,58,0.12),_transparent_18%)]" />
-      <div className="absolute -left-20 top-20 h-80 w-80 rounded-full bg-accent/10 blur-3xl" />
-      <div className="absolute right-0 top-1/4 h-72 w-72 rounded-full bg-[#FA9C3A]/10 blur-3xl" />
-      <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.02),transparent_40%),linear-gradient(240deg,rgba(242,135,46,0.08),transparent_30%)] pointer-events-none" />
+    <section className="relative overflow-hidden bg-transparent py-14 text-white sm:py-20 lg:py-24">
+      <div className="absolute inset-0">
+        <div className="animate-float absolute -left-16 top-16 h-72 w-72 rounded-full bg-accent/20 blur-[120px]" />
+        <div className="animate-float-delayed absolute right-0 top-24 h-80 w-80 rounded-full bg-[#FFB56B]/10 blur-[140px]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.07),_transparent_24%),radial-gradient(circle_at_bottom_right,_rgba(242,135,46,0.12),_transparent_30%)]" />
+      </div>
 
-      <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-6 py-16 lg:px-8">
-        <div className="grid w-full max-w-[1250px] gap-12 xl:grid-cols-[0.9fr_1.1fr] xl:items-center">
+      <div className="relative mx-auto flex min-h-[85vh] max-w-7xl flex-col items-center justify-center px-6 lg:px-8">
+        <div className="grid w-full max-w-[1250px] gap-12 xl:grid-cols-[0.95fr_1.05fr] xl:items-center">
           <div className="space-y-8">
-            <div className="inline-flex animate-fade-in-up items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold uppercase tracking-[0.35em] text-accent backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold uppercase tracking-[0.35em] text-accent backdrop-blur-sm">
+              <span className="animate-pulse-soft h-2.5 w-2.5 rounded-full bg-accent" />
               AI Automation Agency
             </div>
+
             <div className="space-y-6">
               <h1 className="max-w-3xl text-5xl font-semibold leading-tight text-white sm:text-6xl lg:text-[4.5rem] lg:leading-[1.02]">
-                We Automate The Work. You Grow The Business.
+                We automate the work. You grow the business.
               </h1>
               <p className="max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
-                We build intelligent AI systems that handle your lead follow-up, customer support, and daily operations — automatically. While you sleep.
+                We design elegant AI systems that handle lead follow-up, support, and daily operations automatically so your team can focus on growth.
               </p>
             </div>
 
@@ -27,40 +30,44 @@ export default function Hero() {
               <a href="#contact" className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold text-black transition duration-300 hover:-translate-y-0.5 hover:bg-orange-500">
                 Get Your Free AI Audit
               </a>
-              <a href="#how-it-works" className="inline-flex min-w-[220px] items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:border-white hover:bg-white/10">
+              <a href="#process" className="inline-flex min-w-[220px] items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:border-white/40 hover:bg-white/10">
                 See How It Works
               </a>
             </div>
 
-            <div className="text-sm text-text-secondary">
-              Trusted by businesses saving <span className="font-semibold text-white">20+ hours/week</span>
+            <div className="flex flex-wrap gap-3 text-sm text-text-secondary">
+              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-2">20+ hours saved each week</span>
+              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-2">Launch in as little as 2 weeks</span>
             </div>
           </div>
 
           <div className="relative flex items-center justify-center">
-            <div className="relative mx-auto flex h-[420px] w-full max-w-[450px] items-center justify-center rounded-[2rem] border border-white/10 bg-[#10131A]/90 p-8 shadow-glow backdrop-blur-xl">
-              <div className="pointer-events-none absolute inset-0 rounded-[2rem] bg-[radial-gradient(circle_at_top_left,rgba(242,135,46,0.18),transparent_25%),radial-gradient(circle_at_bottom_right,rgba(250,156,58,0.12),transparent_30%)]" />
+            <div className="glass-panel relative mx-auto flex h-[440px] w-full max-w-[470px] items-center justify-center rounded-[2rem] p-7 sm:p-8">
+              <div className="pointer-events-none absolute inset-0 rounded-[2rem] bg-[radial-gradient(circle_at_top_left,rgba(242,135,46,0.18),transparent_24%),radial-gradient(circle_at_bottom_right,rgba(255,181,107,0.12),transparent_30%)]" />
               <div className="relative flex h-full w-full flex-col justify-between gap-5">
-                <div className="space-y-3">
+                <div className="flex items-center justify-between">
                   <div className="h-3 w-24 rounded-full bg-white/10" />
-                  <div className="h-4 w-20 rounded-full bg-accent/60 animate-pulse" />
+                  <div className="rounded-full border border-accent/20 bg-accent/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.3em] text-accent">
+                    Live
+                  </div>
                 </div>
+
                 <div className="grid gap-4">
-                  <div className="flex items-center gap-3 rounded-3xl bg-white/5 px-4 py-4 transition-transform duration-300 hover:-translate-y-1">
+                  <div className="flex items-center gap-3 rounded-[1.35rem] border border-white/10 bg-white/5 px-4 py-4 transition duration-300 hover:-translate-y-1">
                     <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/15 text-accent">AI</div>
                     <div>
                       <p className="text-sm font-semibold text-white">Lead stream</p>
                       <p className="text-xs text-slate-400">Automated prospect capture</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3 rounded-3xl bg-white/5 px-4 py-4 transition-transform duration-300 hover:-translate-y-1">
+                  <div className="flex items-center gap-3 rounded-[1.35rem] border border-white/10 bg-white/5 px-4 py-4 transition duration-300 hover:-translate-y-1">
                     <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-500/15 text-orange-300">Chat</div>
                     <div>
                       <p className="text-sm font-semibold text-white">Smart replies</p>
                       <p className="text-xs text-slate-400">Customer support automation</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3 rounded-3xl bg-white/5 px-4 py-4 transition-transform duration-300 hover:-translate-y-1">
+                  <div className="flex items-center gap-3 rounded-[1.35rem] border border-white/10 bg-white/5 px-4 py-4 transition duration-300 hover:-translate-y-1">
                     <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#6A5AF9]/15 text-[#A78BFA]">Sync</div>
                     <div>
                       <p className="text-sm font-semibold text-white">Workflow sync</p>
@@ -68,11 +75,13 @@ export default function Hero() {
                     </div>
                   </div>
                 </div>
-                <div className="relative mx-auto h-24 w-full overflow-hidden rounded-[1.75rem] bg-[#0B0C11]/70 p-4">
-                  <div className="absolute left-0 top-1/2 h-1 w-full -translate-y-1/2 bg-gradient-to-r from-accent via-transparent to-transparent opacity-80" />
-                  <div className="absolute left-4 top-6 h-5 w-5 rounded-full bg-accent animate-ping-slow" />
-                  <div className="absolute left-28 top-12 h-5 w-5 rounded-full bg-[#FA9C3A] animate-ping-slow delay-150" />
-                  <div className="absolute left-56 top-10 h-5 w-5 rounded-full bg-white/70 animate-ping-slow delay-300" />
+
+                <div className="relative mx-auto h-24 w-full overflow-hidden rounded-[1.5rem] border border-white/10 bg-[#0B0D12]/80 p-4">
+                  <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.08),transparent)]" />
+                  <div className="absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-gradient-to-r from-accent via-transparent to-transparent opacity-80" />
+                  <div className="absolute left-4 top-6 h-5 w-5 rounded-full bg-accent animate-pulse-soft" />
+                  <div className="absolute left-28 top-12 h-5 w-5 rounded-full bg-[#FA9C3A] animate-pulse-soft" />
+                  <div className="absolute left-56 top-10 h-5 w-5 rounded-full bg-white/70 animate-pulse-soft" />
                   <div className="absolute right-8 top-16 h-14 w-14 rounded-full border border-accent/20" />
                 </div>
               </div>
@@ -80,40 +89,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        .animate-fade-in-up {
-          animation: fadeInUp 0.9s ease forwards;
-          opacity: 0;
-        }
-
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(18px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        .animate-ping-slow {
-          animation: ping 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-        }
-
-        .delay-150 {
-          animation-delay: 0.15s;
-        }
-
-        .delay-300 {
-          animation-delay: 0.3s;
-        }
-
-        .shadow-glow {
-          box-shadow: 0 25px 60px rgba(242, 135, 46, 0.18);
-        }
-      `}</style>
     </section>
   );
 }

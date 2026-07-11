@@ -170,19 +170,19 @@ export default function Contact() {
           <form onSubmit={handleSubmit} className="mt-6 grid gap-6 sm:grid-cols-2">
             <div>
               <label className="mb-2 block text-sm font-medium text-white" htmlFor="name">Full Name</label>
-              <input id="name" name="name" value={formValues.name} onChange={handleChange} className={`w-full rounded-lg border px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-accent ${errors.name ? "border-red-500" : "border-white/10 bg-[#0B0F16]"}`} />
+              <input id="name" name="name" value={formValues.name} onChange={handleChange} className={`w-full rounded-lg border px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-accent ${errors.name ? "border-red-500" : "border-white/30 bg-[#0B0F16]"}`} />
               {errors.name ? <p className="mt-2 text-sm text-red-400">{errors.name}</p> : null}
             </div>
 
             <div>
               <label className="mb-2 block text-sm font-medium text-white" htmlFor="email">Email Address</label>
-              <input id="email" type="email" name="email" value={formValues.email} onChange={handleChange} className={`w-full rounded-lg border px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-accent ${errors.email ? "border-red-500" : "border-white/10 bg-[#0B0F16]"}`} />
+              <input id="email" type="email" name="email" value={formValues.email} onChange={handleChange} className={`w-full rounded-lg border px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-accent ${errors.email ? "border-red-500" : "border-white/30 bg-[#0B0F16]"}`} />
               {errors.email ? <p className="mt-2 text-sm text-red-400">{errors.email}</p> : null}
             </div>
 
             <div>
               <label className="mb-2 block text-sm font-medium text-white" htmlFor="businessType">Business Type</label>
-              <select id="businessType" name="businessType" value={formValues.businessType} onChange={handleChange} className="w-full rounded-lg border border-white/10 bg-[#0B0F16] px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent">
+              <select id="businessType" name="businessType" value={formValues.businessType} onChange={handleChange} className="w-full rounded-lg border border-white/30 bg-[#0B0F16] px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent">
                 <option>Real Estate</option>
                 <option>E-Commerce</option>
                 <option>Coaching/Consulting</option>
@@ -193,7 +193,7 @@ export default function Contact() {
 
             <div>
               <label className="mb-2 block text-sm font-medium text-white" htmlFor="source">How did you find us?</label>
-              <select id="source" name="source" value={formValues.source} onChange={handleChange} className="w-full rounded-lg border border-white/10 bg-[#0B0F16] px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent">
+              <select id="source" name="source" value={formValues.source} onChange={handleChange} className="w-full rounded-lg border border-white/30 bg-[#0B0F16] px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent">
                 <option>LinkedIn</option>
                 <option>Google</option>
                 <option>Referral</option>
@@ -203,12 +203,12 @@ export default function Contact() {
 
             <div className="sm:col-span-2">
               <label className="mb-2 block text-sm font-medium text-white" htmlFor="plan">Selected Package</label>
-              <input id="plan" name="plan" value={formValues.plan} onChange={handleChange} className="w-full rounded-lg border border-white/10 bg-[#0B0F16] px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-accent" placeholder="Select a package to prefill this field" />
+              <input id="plan" name="plan" value={formValues.plan} onChange={handleChange} className="w-full rounded-lg border border-white/30 bg-[#0B0F16] px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-accent" placeholder="Select a package to prefill this field" />
             </div>
 
             <div className="sm:col-span-2">
               <label className="mb-2 block text-sm font-medium text-white" htmlFor="message">What is your biggest time-waster right now?</label>
-              <textarea id="message" name="message" rows={5} value={formValues.message} onChange={handleChange} className={`w-full rounded-lg border px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-accent ${errors.message ? "border-red-500" : "border-white/10 bg-[#0B0F16]"}`} />
+              <textarea id="message" name="message" rows={5} value={formValues.message} onChange={handleChange} className={`w-full rounded-lg border px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-accent ${errors.message ? "border-red-500" : "border-white/30 bg-[#0B0F16]"}`} />
               {errors.message ? <p className="mt-2 text-sm text-red-400">{errors.message}</p> : null}
             </div>
 

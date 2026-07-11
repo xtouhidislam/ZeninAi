@@ -82,7 +82,7 @@ export default function Services() {
             <article
               key={service.name}
               data-reveal-item
-              className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#10131A] p-7 transition duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-[0_20px_60px_rgba(242,135,46,0.18)]"
+              className="glass-panel group relative overflow-hidden rounded-[2rem] p-7 transition duration-300 hover:-translate-y-1 hover:border-accent/30"
             >
               <div className="flex items-center justify-between gap-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-3xl bg-accent/10 text-accent">
