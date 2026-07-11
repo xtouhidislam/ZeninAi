@@ -156,17 +156,17 @@ export default function Contact() {
     <section id="contact" className="py-20">
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
         {/* PART 1 — CTA Banner */}
-        <div className="rounded-2xl bg-gradient-to-r from-[#061428] via-[#07111a] to-[#061428] p-10 text-center shadow-glow">
-          <h2 className="text-3xl font-semibold text-white sm:text-4xl [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]">Ready to Reclaim 20 Hours Per Week?</h2>
-          <p className="mt-4 max-w-3xl mx-auto text-base leading-7 text-white/85">Book a free 30-minute AI Audit. We will identify exactly where your business is leaking time and money, and show you what we would automate.</p>
+        <div className="rounded-[1.75rem] border border-[color:var(--border-soft)] bg-[color:var(--surface)] p-10 text-center shadow-glow">
+          <h2 className="text-3xl font-semibold text-[color:var(--text-primary)] sm:text-4xl">Ready to Reclaim 20 Hours Per Week?</h2>
+          <p className="mx-auto mt-4 max-w-3xl text-base leading-7 text-[color:var(--text-secondary)]">Book a free 30-minute AI Audit. We will identify exactly where your business is leaking time and money, and show you what we would automate.</p>
 
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <a href="#contact-form" className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-3 text-sm font-semibold text-black shadow hover:bg-orange-500">Book Your Free Audit</a>
           </div>
 
-          <p className="mt-4 text-sm text-white/85">No sales pressure. No commitment. Just clarity.</p>
+          <p className="mt-4 text-sm text-[color:var(--text-secondary)]">No sales pressure. No commitment. Just clarity.</p>
 
-          <p className="mt-6 text-sm text-white/85">Prefer email? Reach us at <a href="mailto:social.zeninai@gmail.com" className="text-accent hover:underline">social.zeninai@gmail.com</a></p>
+          <p className="mt-6 text-sm text-[color:var(--text-secondary)]">Prefer email? Reach us at <a href="mailto:social.zeninai@gmail.com" className="text-accent hover:underline">social.zeninai@gmail.com</a></p>
         </div>
 
         {/* PART 2 — Contact Form */}
