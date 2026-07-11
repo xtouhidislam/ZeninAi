@@ -11,6 +11,7 @@ type FormValues = {
   source: string;
   message: string;
   plan: string;
+  packageChoice: string;
 };
 
 type FormErrors = Partial<Record<keyof FormValues, string>>;
@@ -22,6 +23,7 @@ const initialValues: FormValues = {
   source: "LinkedIn",
   message: "",
   plan: "",
+  packageChoice: "",
 };
 
 const fixedRecipient = "social.zeninai@gmail.com";
@@ -44,7 +46,7 @@ export default function Contact() {
     const updatePlanFromStorage = () => {
       const savedPlan = window.sessionStorage.getItem("selectedPricingPlan");
       if (savedPlan) {
-        setFormValues((prev) => ({ ...prev, plan: savedPlan }));
+        setFormValues((prev) => ({ ...prev, plan: savedPlan, packageChoice: savedPlan }));
       }
     };
 
@@ -53,7 +55,7 @@ export default function Contact() {
     const handlePlanSelected = (event: Event) => {
       const customEvent = event as CustomEvent<{ plan: string }>;
       if (customEvent.detail?.plan) {
-        setFormValues((prev) => ({ ...prev, plan: customEvent.detail.plan }));
+        setFormValues((prev) => ({ ...prev, plan: customEvent.detail.plan, packageChoice: customEvent.detail.plan }));
       }
     };
 
@@ -89,7 +91,11 @@ export default function Contact() {
 
   function handleChange(event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
     const { name, value } = event.target;
-    setFormValues((prev) => ({ ...prev, [name]: value }));
+    setFormValues((prev) => ({
+      ...prev,
+      [name]: value,
+      ...(name === "packageChoice" ? { plan: value } : {}),
+    }));
     setErrors((prev) => ({ ...prev, [name]: undefined }));
   }
 
@@ -202,8 +208,15 @@ export default function Contact() {
             </div>
 
             <div className="sm:col-span-2">
-              <label className="mb-2 block text-sm font-medium text-white" htmlFor="plan">Selected Package</label>
-              <input id="plan" name="plan" value={formValues.plan} onChange={handleChange} className="w-full rounded-lg border border-white/30 bg-[#0B0F16] px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-accent" placeholder="Select a package to prefill this field" />
+              <label className="mb-2 block text-sm font-medium text-white" htmlFor="packageChoice">Package</label>
+              <select id="packageChoice" name="packageChoice" value={formValues.packageChoice} onChange={handleChange} className="w-full rounded-lg border border-white/30 bg-[#0B0F16] px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent">
+                <option value="">Select a package</option>
+                <option value="Starter Automation">Starter Automation</option>
+                <option value="Growth Automation">Growth Automation</option>
+                <option value="Scale Automation">Scale Automation</option>
+                <option value="Custom Package">Custom Package</option>
+              </select>
+              <p className="mt-2 text-sm text-text-secondary">Choose a package or pick Custom Package and tell us what you need.</p>
             </div>
 
             <div className="sm:col-span-2">
