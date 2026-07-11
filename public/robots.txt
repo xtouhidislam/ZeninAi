@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap placeholder — generate a real sitemap.xml when ready
+# Sitemap: /sitemap.xml
