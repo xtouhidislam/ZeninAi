@@ -157,16 +157,16 @@ export default function Contact() {
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
         {/* PART 1 — CTA Banner */}
         <div className="rounded-2xl bg-gradient-to-r from-[#061428] via-[#07111a] to-[#061428] p-10 text-center shadow-glow">
-          <h2 className="text-3xl font-semibold text-[color:var(--text-primary)] sm:text-4xl">Ready to Reclaim 20 Hours Per Week?</h2>
-          <p className="mt-4 max-w-3xl mx-auto text-base leading-7 text-[color:var(--text-secondary)]">Book a free 30-minute AI Audit. We will identify exactly where your business is leaking time and money, and show you what we would automate.</p>
+          <h2 className="text-3xl font-semibold text-white sm:text-4xl">Ready to Reclaim 20 Hours Per Week?</h2>
+          <p className="mt-4 max-w-3xl mx-auto text-base leading-7 text-white/80">Book a free 30-minute AI Audit. We will identify exactly where your business is leaking time and money, and show you what we would automate.</p>
 
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <a href="#contact-form" className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-3 text-sm font-semibold text-black shadow hover:bg-orange-500">Book Your Free Audit</a>
           </div>
 
-          <p className="mt-4 text-sm text-[color:var(--text-secondary)]">No sales pressure. No commitment. Just clarity.</p>
+          <p className="mt-4 text-sm text-white/80">No sales pressure. No commitment. Just clarity.</p>
 
-          <p className="mt-6 text-sm text-[color:var(--text-secondary)]">Prefer email? Reach us at <a href="mailto:social.zeninai@gmail.com" className="text-accent hover:underline">social.zeninai@gmail.com</a></p>
+          <p className="mt-6 text-sm text-white/80">Prefer email? Reach us at <a href="mailto:social.zeninai@gmail.com" className="text-accent hover:underline">social.zeninai@gmail.com</a></p>
         </div>
 
         {/* PART 2 — Contact Form */}
@@ -216,7 +216,7 @@ export default function Contact() {
                 <option value="Scale Automation">Scale Automation</option>
                 <option value="Custom Package">Custom Package</option>
               </select>
-              <p className="mt-2 text-sm text-[color:var(--text-secondary)]">Choose a package or pick Custom Package and tell us what you need.</p>
+              <p className="mt-2 text-sm text-white/80">Choose a package or pick Custom Package and tell us what you need.</p>
             </div>
 
             <div className="sm:col-span-2">
@@ -226,7 +226,7 @@ export default function Contact() {
             </div>
 
             <div className="sm:col-span-2 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <p className="text-sm text-[color:var(--text-secondary)]">We’ll reply within 24 hours.</p>
+              <p className="text-sm text-white/80">We’ll reply within 24 hours.</p>
               <button type="submit" disabled={submitting} className="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold text-black shadow hover:bg-orange-500 disabled:cursor-not-allowed disabled:opacity-70">
                 {submitting ? "Sending…" : "Send Message"}
               </button>
