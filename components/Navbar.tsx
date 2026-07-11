@@ -51,9 +51,10 @@ export default function Navbar() {
   return (
     <nav className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled ? "border-b border-white/10 bg-black/70 backdrop-blur-xl" : "bg-transparent"}`}>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 transition-colors duration-300 lg:px-8">
-        <button className="text-lg font-semibold tracking-tight text-white sm:text-xl" onClick={() => handleNavClick("services")}
+        <button className="flex items-center gap-3 text-lg font-semibold tracking-tight text-white sm:text-xl" onClick={() => handleNavClick("services")}
           aria-label="Scroll to top">
-          <span className="text-accent">Z</span>enin AI
+          <img src="/zeninai_logo.png" alt="Zenin AI logo" className="h-8 w-auto sm:h-9" />
+          <span className="hidden sm:inline">Zenin AI</span>
         </button>
 
         <div className="hidden items-center gap-8 md:flex">

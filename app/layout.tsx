@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   title: "Zenin AI | AI Automation Agency",
   description:
     "We build AI automation systems that save businesses 20+ hours per week. Lead generation, chatbots, workflows — built for you in 2 weeks.",
+  icons: {
+    icon: "/zeninai_logo.png",
+    shortcut: "/zeninai_logo.png",
+    apple: "/zeninai_logo.png",
+  },
   keywords: [
     "AI automation agency",
     "business automation",
