@@ -7,9 +7,9 @@ export default function About() {
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
             <p className="text-sm uppercase tracking-[0.35em] text-accent">WHO WE ARE</p>
-            <h2 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">Built by Automators, For Business Owners</h2>
+            <h2 className="mt-4 text-3xl font-semibold text-[color:var(--text-primary)] sm:text-4xl">Built by Automators, For Business Owners</h2>
 
-            <div className="mt-6 space-y-6 text-base leading-7 text-text-secondary">
+            <div className="mt-6 space-y-6 text-base leading-7 text-[color:var(--text-secondary)]">
               <p>
                 I started this agency because I watched business owners drown in repetitive tasks — answering the same emails, manually
                 following up leads, copying data between spreadsheets. Things that should take seconds were taking hours.
@@ -30,21 +30,21 @@ export default function About() {
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <div className="inline-flex items-center gap-3 rounded-full bg-white/3 px-4 py-2">
-                <span className="text-sm font-semibold text-white">2 Weeks Average Delivery</span>
+                <span className="text-sm font-semibold text-[color:var(--text-primary)]">2 Weeks Average Delivery</span>
               </div>
 
               <div className="inline-flex items-center gap-3 rounded-full bg-white/3 px-4 py-2">
-                <span className="text-sm font-semibold text-white">30-Day Fix Guarantee</span>
+                <span className="text-sm font-semibold text-[color:var(--text-primary)]">30-Day Fix Guarantee</span>
               </div>
 
               <div className="inline-flex items-center gap-3 rounded-full bg-white/3 px-4 py-2">
-                <span className="text-sm font-semibold text-white">No Lock-In Contracts</span>
+                <span className="text-sm font-semibold text-[color:var(--text-primary)]">No Lock-In Contracts</span>
               </div>
             </div>
           </div>
 
           <div className="flex items-center justify-center">
-            <div className="relative h-72 w-full max-w-md rounded-2xl bg-gradient-to-br from-white/3 to-white/2 p-6">
+            <div className="relative h-72 w-full max-w-md rounded-2xl border border-[color:var(--border-soft)] bg-[color:var(--surface)] p-6 shadow-glow">
               <svg viewBox="0 0 400 300" className="h-full w-full" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <defs>
                   <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">

@@ -29,7 +29,7 @@ const processSteps = [
 
 export default function Process() {
   return (
-    <section id="process" className="py-20">
+    <section id="process" className="scroll-mt-28 py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeading
           label="THE PROCESS"
@@ -43,19 +43,19 @@ export default function Process() {
 
           <div className="grid gap-8 lg:grid-cols-4">
             {processSteps.map((step, index) => (
-              <div key={step.title} data-reveal-item className="relative rounded-[2rem] border border-white/10 bg-surface/90 p-6 shadow-glow">
+              <div key={step.title} data-reveal-item className="relative rounded-[2rem] border border-[color:var(--border-soft)] bg-[color:var(--surface)] p-6 shadow-glow">
                 <div className="flex items-center gap-4">
-                  <div className={`flex h-16 w-16 items-center justify-center rounded-3xl text-2xl font-semibold ${index % 2 === 0 ? "bg-accent text-black" : "bg-white/10 text-white"}`}>
+                  <div className={`flex h-16 w-16 items-center justify-center rounded-3xl text-2xl font-semibold ${index % 2 === 0 ? "bg-accent text-black" : "bg-[color:var(--surface-strong)] text-[color:var(--text-primary)]"}`}>
                     {index + 1}
                   </div>
-                  <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-white/5 text-2xl">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-[color:var(--surface)] text-2xl">
                     <span aria-hidden="true">{step.icon}</span>
                   </div>
                 </div>
 
                 <div className="mt-8 space-y-4">
-                  <h3 className="text-xl font-semibold text-white">{step.title}</h3>
-                  <p className="text-sm leading-7 text-text-secondary">{step.description}</p>
+                  <h3 className="text-xl font-semibold text-[color:var(--text-primary)]">{step.title}</h3>
+                  <p className="text-sm leading-7 text-[color:var(--text-secondary)]">{step.description}</p>
                 </div>
 
                 {index < processSteps.length - 1 ? (

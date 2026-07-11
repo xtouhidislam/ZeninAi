@@ -157,38 +157,38 @@ export default function Contact() {
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
         {/* PART 1 — CTA Banner */}
         <div className="rounded-2xl bg-gradient-to-r from-[#061428] via-[#07111a] to-[#061428] p-10 text-center shadow-glow">
-          <h2 className="text-3xl font-semibold text-white sm:text-4xl">Ready to Reclaim 20 Hours Per Week?</h2>
-          <p className="mt-4 max-w-3xl mx-auto text-base leading-7 text-text-secondary">Book a free 30-minute AI Audit. We will identify exactly where your business is leaking time and money, and show you what we would automate.</p>
+          <h2 className="text-3xl font-semibold text-[color:var(--text-primary)] sm:text-4xl">Ready to Reclaim 20 Hours Per Week?</h2>
+          <p className="mt-4 max-w-3xl mx-auto text-base leading-7 text-[color:var(--text-secondary)]">Book a free 30-minute AI Audit. We will identify exactly where your business is leaking time and money, and show you what we would automate.</p>
 
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <a href="#contact-form" className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-3 text-sm font-semibold text-black shadow hover:bg-orange-500">Book Your Free Audit</a>
           </div>
 
-          <p className="mt-4 text-sm text-text-secondary">No sales pressure. No commitment. Just clarity.</p>
+          <p className="mt-4 text-sm text-[color:var(--text-secondary)]">No sales pressure. No commitment. Just clarity.</p>
 
-          <p className="mt-6 text-sm text-text-secondary">Prefer email? Reach us at <a href="mailto:social.zeninai@gmail.com" className="text-accent hover:underline">social.zeninai@gmail.com</a></p>
+          <p className="mt-6 text-sm text-[color:var(--text-secondary)]">Prefer email? Reach us at <a href="mailto:social.zeninai@gmail.com" className="text-accent hover:underline">social.zeninai@gmail.com</a></p>
         </div>
 
         {/* PART 2 — Contact Form */}
-        <div id="contact-form" className="mt-12 rounded-2xl border border-white/10 bg-surface/90 p-8 shadow-glow">
+        <div id="contact-form" className="mt-12 rounded-2xl border border-[color:var(--border-soft)] bg-[color:var(--surface)] p-8 shadow-glow">
           <SectionHeading label="" title="Or Send Us a Message" subtitle="" />
 
           <form onSubmit={handleSubmit} className="mt-6 grid gap-6 sm:grid-cols-2">
             <div>
-              <label className="mb-2 block text-sm font-medium text-white" htmlFor="name">Full Name</label>
-              <input id="name" name="name" value={formValues.name} onChange={handleChange} className={`w-full rounded-lg border px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-accent ${errors.name ? "border-red-500" : "border-white/30 bg-[#0B0F16]"}`} />
+              <label className="mb-2 block text-sm font-medium text-[color:var(--text-primary)]" htmlFor="name">Full Name</label>
+              <input id="name" name="name" value={formValues.name} onChange={handleChange} className={`w-full rounded-lg border px-4 py-3 text-[color:var(--text-primary)] placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-accent ${errors.name ? "border-red-500" : "border-[color:var(--border-soft)] bg-[color:var(--bg-primary)]"}`} />
               {errors.name ? <p className="mt-2 text-sm text-red-400">{errors.name}</p> : null}
             </div>
 
             <div>
-              <label className="mb-2 block text-sm font-medium text-white" htmlFor="email">Email Address</label>
-              <input id="email" type="email" name="email" value={formValues.email} onChange={handleChange} className={`w-full rounded-lg border px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-accent ${errors.email ? "border-red-500" : "border-white/30 bg-[#0B0F16]"}`} />
+              <label className="mb-2 block text-sm font-medium text-[color:var(--text-primary)]" htmlFor="email">Email Address</label>
+              <input id="email" type="email" name="email" value={formValues.email} onChange={handleChange} className={`w-full rounded-lg border px-4 py-3 text-[color:var(--text-primary)] placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-accent ${errors.email ? "border-red-500" : "border-[color:var(--border-soft)] bg-[color:var(--bg-primary)]"}`} />
               {errors.email ? <p className="mt-2 text-sm text-red-400">{errors.email}</p> : null}
             </div>
 
             <div>
-              <label className="mb-2 block text-sm font-medium text-white" htmlFor="businessType">Business Type</label>
-              <select id="businessType" name="businessType" value={formValues.businessType} onChange={handleChange} className="w-full rounded-lg border border-white/30 bg-[#0B0F16] px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent">
+              <label className="mb-2 block text-sm font-medium text-[color:var(--text-primary)]" htmlFor="businessType">Business Type</label>
+              <select id="businessType" name="businessType" value={formValues.businessType} onChange={handleChange} className="w-full rounded-lg border border-[color:var(--border-soft)] bg-[color:var(--bg-primary)] px-4 py-3 text-[color:var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-accent">
                 <option>Real Estate</option>
                 <option>E-Commerce</option>
                 <option>Coaching/Consulting</option>
@@ -198,8 +198,8 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="mb-2 block text-sm font-medium text-white" htmlFor="source">How did you find us?</label>
-              <select id="source" name="source" value={formValues.source} onChange={handleChange} className="w-full rounded-lg border border-white/30 bg-[#0B0F16] px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent">
+              <label className="mb-2 block text-sm font-medium text-[color:var(--text-primary)]" htmlFor="source">How did you find us?</label>
+              <select id="source" name="source" value={formValues.source} onChange={handleChange} className="w-full rounded-lg border border-[color:var(--border-soft)] bg-[color:var(--bg-primary)] px-4 py-3 text-[color:var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-accent">
                 <option>LinkedIn</option>
                 <option>Google</option>
                 <option>Referral</option>
@@ -208,25 +208,25 @@ export default function Contact() {
             </div>
 
             <div className="sm:col-span-2">
-              <label className="mb-2 block text-sm font-medium text-white" htmlFor="packageChoice">Package</label>
-              <select id="packageChoice" name="packageChoice" value={formValues.packageChoice} onChange={handleChange} className="w-full rounded-lg border border-white/30 bg-[#0B0F16] px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent">
+              <label className="mb-2 block text-sm font-medium text-[color:var(--text-primary)]" htmlFor="packageChoice">Package</label>
+              <select id="packageChoice" name="packageChoice" value={formValues.packageChoice} onChange={handleChange} className="w-full rounded-lg border border-[color:var(--border-soft)] bg-[color:var(--bg-primary)] px-4 py-3 text-[color:var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-accent">
                 <option value="">Select a package</option>
                 <option value="Starter Automation">Starter Automation</option>
                 <option value="Growth Automation">Growth Automation</option>
                 <option value="Scale Automation">Scale Automation</option>
                 <option value="Custom Package">Custom Package</option>
               </select>
-              <p className="mt-2 text-sm text-text-secondary">Choose a package or pick Custom Package and tell us what you need.</p>
+              <p className="mt-2 text-sm text-[color:var(--text-secondary)]">Choose a package or pick Custom Package and tell us what you need.</p>
             </div>
 
             <div className="sm:col-span-2">
-              <label className="mb-2 block text-sm font-medium text-white" htmlFor="message">What is your biggest time-waster right now?</label>
-              <textarea id="message" name="message" rows={5} value={formValues.message} onChange={handleChange} className={`w-full rounded-lg border px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-accent ${errors.message ? "border-red-500" : "border-white/30 bg-[#0B0F16]"}`} />
+              <label className="mb-2 block text-sm font-medium text-[color:var(--text-primary)]" htmlFor="message">What is your biggest time-waster right now?</label>
+              <textarea id="message" name="message" rows={5} value={formValues.message} onChange={handleChange} className={`w-full rounded-lg border px-4 py-3 text-[color:var(--text-primary)] placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-accent ${errors.message ? "border-red-500" : "border-[color:var(--border-soft)] bg-[color:var(--bg-primary)]"}`} />
               {errors.message ? <p className="mt-2 text-sm text-red-400">{errors.message}</p> : null}
             </div>
 
             <div className="sm:col-span-2 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <p className="text-sm text-text-secondary">We’ll reply within 24 hours.</p>
+              <p className="text-sm text-[color:var(--text-secondary)]">We’ll reply within 24 hours.</p>
               <button type="submit" disabled={submitting} className="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold text-black shadow hover:bg-orange-500 disabled:cursor-not-allowed disabled:opacity-70">
                 {submitting ? "Sending…" : "Send Message"}
               </button>

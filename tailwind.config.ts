@@ -5,12 +5,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#0B0C11",
-        surface: "#1A1A1F",
+        background: "var(--bg-primary)",
+        surface: "var(--surface-strong)",
         accent: "#F2872E",
         accent2: "#FA9C3A",
-        text: "#FFFFFF",
-        muted: "#AAAAAA",
+        text: {
+          DEFAULT: "var(--text-primary)",
+          secondary: "var(--text-secondary)",
+        },
+        muted: "var(--text-secondary)",
       },
       boxShadow: {
         glow: "0 25px 50px rgba(242, 135, 46, 0.18)",

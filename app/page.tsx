@@ -35,7 +35,7 @@ export default function Home() {
           </Reveal>
         </div>
 
-        <div id="process" className="scroll-mt-28">
+        <div className="scroll-mt-28">
           <Reveal>
             <Process />
           </Reveal>

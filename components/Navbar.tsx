@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 
 const navItems = [
   { label: "Services", target: "services" },
@@ -14,6 +15,8 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("services");
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,6 +39,7 @@ export default function Navbar() {
     };
 
     handleScroll();
+    setMounted(true);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -57,7 +61,7 @@ export default function Navbar() {
           <span className="hidden sm:inline">Zenin AI</span>
         </button>
 
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-3 md:flex">
           {navItems.map((item) => (
             <button
               key={item.target}
@@ -68,6 +72,23 @@ export default function Navbar() {
               {item.label}
             </button>
           ))}
+          <button
+            type="button"
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
+            aria-label="Toggle color theme"
+          >
+            {mounted && theme === "dark" ? (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5" aria-hidden="true">
+                <circle cx="12" cy="12" r="4.2" />
+                <path d="M12 2.5v2.1M12 19.4v2.1M4.7 4.7l1.5 1.5M17.8 17.8l1.5 1.5M2.5 12h2.1M19.4 12h2.1M4.7 19.3l1.5-1.5M17.8 6.2l1.5-1.5" />
+              </svg>
+            ) : (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5" aria-hidden="true">
+                <path d="M21 12.8A8.8 8.8 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
+              </svg>
+            )}
+          </button>
           <button
             type="button"
             onClick={() => handleNavClick("contact")}
@@ -103,13 +124,32 @@ export default function Navbar() {
               {item.label}
             </button>
           ))}
-          <button
-            type="button"
-            onClick={() => handleNavClick("contact")}
-            className="mt-2 rounded-full bg-accent px-5 py-3 text-sm font-semibold text-black transition hover:bg-orange-500"
-          >
-            Get Free Audit
-          </button>
+          <div className="mt-2 flex items-center gap-3">
+            <button
+              type="button"
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
+              aria-label="Toggle color theme"
+            >
+              {mounted && theme === "dark" ? (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5" aria-hidden="true">
+                  <circle cx="12" cy="12" r="4.2" />
+                  <path d="M12 2.5v2.1M12 19.4v2.1M4.7 4.7l1.5 1.5M17.8 17.8l1.5 1.5M2.5 12h2.1M19.4 12h2.1M4.7 19.3l1.5-1.5M17.8 6.2l1.5-1.5" />
+                </svg>
+              ) : (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5" aria-hidden="true">
+                  <path d="M21 12.8A8.8 8.8 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
+                </svg>
+              )}
+            </button>
+            <button
+              type="button"
+              onClick={() => handleNavClick("contact")}
+              className="flex-1 rounded-full bg-accent px-5 py-3 text-sm font-semibold text-black transition hover:bg-orange-500"
+            >
+              Get Free Audit
+            </button>
+          </div>
         </div>
       </div>
     </nav>

@@ -35,14 +35,14 @@ export default function Testimonials() {
             <article
               key={i}
               data-reveal-item
-              className="rounded-[1.5rem] border border-white/10 bg-surface/90 p-8 shadow-glow"
+              className="rounded-[1.5rem] border border-[color:var(--border-soft)] bg-[color:var(--surface)] p-8 shadow-glow"
             >
-              <blockquote className="text-lg italic leading-8 text-white/90">“{t.quote}”</blockquote>
+              <blockquote className="text-lg italic leading-8 text-[color:var(--text-primary)]/90">“{t.quote}”</blockquote>
 
               <div className="mt-6 flex items-center justify-between">
                 <div>
-                  <p className="font-semibold text-white">{t.name}</p>
-                  <p className="text-sm text-text-secondary">{t.role}</p>
+                  <p className="font-semibold text-[color:var(--text-primary)]">{t.name}</p>
+                  <p className="text-sm text-[color:var(--text-secondary)]">{t.role}</p>
                 </div>
 
                 <div className="flex items-center gap-1">

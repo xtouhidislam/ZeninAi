@@ -69,12 +69,12 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="scroll-mt-28 border-t border-white/10 bg-background/80 py-20 text-white">
+    <section id="services" className="scroll-mt-28 border-t border-[color:var(--border-soft)] bg-[color:var(--bg-secondary)]/80 py-20 text-[color:var(--text-primary)]">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="max-w-3xl space-y-4 text-center">
           <p className="text-sm uppercase tracking-[0.35em] text-accent">WHAT WE BUILD</p>
-          <h2 className="text-3xl font-semibold text-white sm:text-4xl lg:text-5xl">AI Systems That Work While You Don't</h2>
-          <p className="text-base leading-8 text-slate-400 sm:text-lg">Every service is built to solve a real, costly business problem.</p>
+          <h2 className="text-3xl font-semibold text-[color:var(--text-primary)] sm:text-4xl lg:text-5xl">AI Systems That Work While You Don't</h2>
+          <p className="text-base leading-8 text-[color:var(--text-secondary)] sm:text-lg">Every service is built to solve a real, costly business problem.</p>
         </div>
 
         <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -95,8 +95,8 @@ export default function Services() {
                 ) : null}
               </div>
 
-              <h3 className="mt-8 text-xl font-semibold text-white">{service.name}</h3>
-              <p className="mt-4 text-sm leading-7 text-slate-300">{service.description}</p>
+              <h3 className="mt-8 text-xl font-semibold text-[color:var(--text-primary)]">{service.name}</h3>
+              <p className="mt-4 text-sm leading-7 text-[color:var(--text-secondary)]">{service.description}</p>
             </article>
           ))}
         </div>

@@ -67,21 +67,21 @@ export default function Results() {
   }, [visible]);
 
   return (
-    <section ref={sectionRef} className="w-full border-t border-white/10 bg-[#07090f] bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_30%)] py-16">
+    <section ref={sectionRef} className="w-full border-t border-[color:var(--border-soft)] bg-[color:var(--bg-primary)]/90 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_30%)] py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm uppercase tracking-[0.35em] text-accent">The numbers speak for themselves</p>
-          <h2 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">Real impact, measured in speed, savings, and retention.</h2>
+          <h2 className="mt-4 text-3xl font-semibold text-[color:var(--text-primary)] sm:text-4xl">Real impact, measured in speed, savings, and retention.</h2>
         </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((stat, index) => (
-            <div key={stat.label} data-reveal-item className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 text-center backdrop-blur-xl">
+            <div key={stat.label} data-reveal-item className="rounded-[1.75rem] border border-[color:var(--border-soft)] bg-[color:var(--surface)] p-6 text-center backdrop-blur-xl">
               <p className="text-5xl font-semibold tracking-tight text-accent sm:text-6xl">
                 {counts[index]}
                 <span className="text-3xl">{stat.suffix}</span>
               </p>
-              <p className="mt-4 text-sm leading-7 text-text-secondary">{stat.label}</p>
+              <p className="mt-4 text-sm leading-7 text-[color:var(--text-secondary)]">{stat.label}</p>
             </div>
           ))}
         </div>

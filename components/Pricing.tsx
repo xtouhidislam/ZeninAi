@@ -93,8 +93,8 @@ export default function Pricing() {
               onKeyDown={(e) => handleKey(e, plan.name)}
               className={`group relative overflow-hidden rounded-[2rem] border p-8 shadow-glow transition-transform duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-accent/20 focus-visible:ring-offset-2 hover:-translate-y-2 hover:scale-105 focus:-translate-y-2 focus:scale-105 ${
                 plan.featured
-                  ? "border-accent/40 bg-[#111827] lg:-mt-4 lg:scale-[1.02]"
-                  : "border-white/10 bg-surface/90"
+                  ? "border-accent/40 bg-[color:var(--surface-strong)] lg:-mt-4 lg:scale-[1.02]"
+                  : "border-[color:var(--border-soft)] bg-[color:var(--surface)]"
               } ${selected === plan.name ? "ring-4 ring-accent/30 border-accent/60 scale-105" : ""}`}
             >
               {plan.featured ? (
@@ -105,17 +105,17 @@ export default function Pricing() {
 
               <div className="space-y-4">
                 <div>
-                  <p className="text-sm uppercase tracking-[0.35em] text-white/60">{plan.name}</p>
-                  <p className={`mt-4 text-4xl font-semibold ${plan.featured ? "text-accent" : "text-white"}`}>
+                  <p className="text-sm uppercase tracking-[0.35em] text-[color:var(--text-secondary)]">{plan.name}</p>
+                  <p className={`mt-4 text-4xl font-semibold ${plan.featured ? "text-accent" : "text-[color:var(--text-primary)]"}`}>
                     {plan.price}
                   </p>
                 </div>
-                <p className="text-sm leading-7 text-text-secondary">Ideal for: {plan.ideal}</p>
+                <p className="text-sm leading-7 text-[color:var(--text-secondary)]">Ideal for: {plan.ideal}</p>
               </div>
 
               <div className="mt-8 space-y-4">
                 {plan.features.map((feature) => (
-                  <div key={feature} className="flex items-start gap-3 text-sm leading-7 text-white/90">
+                  <div key={feature} className="flex items-start gap-3 text-sm leading-7 text-[color:var(--text-primary)]/90">
                     <span className="mt-1 inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-accent/10 text-accent">
                       ✓
                     </span>
@@ -133,7 +133,7 @@ export default function Pricing() {
                 className={`mt-10 inline-flex w-full items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition ${
                   plan.featured
                     ? "bg-accent text-black hover:bg-orange-500"
-                    : "border border-white/10 bg-white/5 text-white hover:border-accent/30"
+                    : "border border-[color:var(--border-soft)] bg-[color:var(--surface)] text-[color:var(--text-primary)] hover:border-accent/30"
                 }`}
               >
                 {plan.cta}
@@ -142,7 +142,7 @@ export default function Pricing() {
           ))}
         </div>
 
-        <div className="mt-10 rounded-[1.75rem] border border-white/10 bg-surface/90 p-8 text-center shadow-glow">
+        <div className="mt-10 rounded-[1.75rem] border border-[color:var(--border-soft)] bg-[color:var(--surface)] p-8 text-center shadow-glow">
           <p className="text-base leading-7 text-text-secondary">
             Not sure which package? Book a free 30-minute audit call — we will tell you exactly what you need.
           </p>
