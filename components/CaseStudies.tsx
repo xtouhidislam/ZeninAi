@@ -57,15 +57,15 @@ export default function CaseStudies() {
                 <span className="rounded-full bg-accent/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-accent">
                   {caseStudy.badge}
                 </span>
-                <span className="text-sm font-semibold text-white/70">{caseStudy.industry}</span>
+                <span className="text-sm font-semibold text-[color:var(--text-secondary)]">{caseStudy.industry}</span>
               </div>
 
               <p className="mt-6 text-sm italic text-text-secondary">{caseStudy.problem}</p>
-              <p className="mt-4 text-base leading-7 text-white">{caseStudy.solution}</p>
+              <p className="mt-4 text-base leading-7 text-[color:var(--text-primary)]">{caseStudy.solution}</p>
 
               <div className="mt-8 space-y-4">
                 {caseStudy.results.map((result) => (
-                  <div key={result} className="flex items-start gap-3 text-sm leading-7 text-white/90">
+                  <div key={result} className="flex items-start gap-3 text-sm leading-7 text-[color:var(--text-primary)]">
                     <span className="mt-1 inline-flex h-7 w-7 items-center justify-center rounded-2xl bg-accent/10 text-accent">
                       ✓
                     </span>

@@ -111,9 +111,21 @@ body::before {
 
 [data-theme="light"] .text-white,
 [data-theme="light"] .text-white\/80,
+[data-theme="light"] .text-white\/70,
 [data-theme="light"] .text-white\/60,
-[data-theme="light"] .text-white\/40 {
+[data-theme="light"] .text-white\/50,
+[data-theme="light"] .text-white\/40,
+[data-theme="light"] .text-white\/30,
+[data-theme="light"] .text-white\/20,
+[data-theme="light"] .text-white\/10,
+[data-theme="light"] .text-white\/5,
+[data-theme="light"] .hover\:text-white:hover {
   color: var(--text-primary) !important;
+}
+
+.footer-force-light,
+.footer-force-light * {
+  color: #f8fafc !important;
 }
 
 [data-theme="light"] .text-slate-300,

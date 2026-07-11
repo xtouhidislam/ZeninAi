@@ -1,11 +1,11 @@
 export default function Footer() {
   return (
-    <footer className="mt-20 border-t border-white/10 bg-background text-white">
+    <footer className="footer-force-light mt-20 border-t border-white/10 bg-[#04050a] text-white">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <div>
             <h3 className="text-xl font-semibold">Zenin AI</h3>
-            <p className="mt-2 text-sm text-text-secondary">We build AI automation systems that save businesses 20+ hours per week.</p>
+            <p className="mt-2 text-sm text-white/80">We build AI automation systems that save businesses 20+ hours per week.</p>
 
             <div className="mt-4 flex items-center gap-4">
               <a aria-label="LinkedIn" className="text-white/80 hover:text-accent">
@@ -24,7 +24,7 @@ export default function Footer() {
 
           <div>
             <h4 className="text-sm font-semibold text-white">Services</h4>
-            <ul className="mt-4 space-y-2 text-text-secondary">
+            <ul className="mt-4 space-y-2 text-white/80">
               <li className="hover:text-white hover:underline">AI Lead Generation</li>
               <li className="hover:text-white hover:underline">Customer Support Chatbot</li>
               <li className="hover:text-white hover:underline">Booking Automation</li>
@@ -36,7 +36,7 @@ export default function Footer() {
 
           <div>
             <h4 className="text-sm font-semibold text-white">Company</h4>
-            <ul className="mt-4 space-y-2 text-text-secondary">
+            <ul className="mt-4 space-y-2 text-white/80">
               <li className="hover:text-white hover:underline">About</li>
               <li className="hover:text-white hover:underline">Case Studies</li>
               <li className="hover:text-white hover:underline">Pricing</li>
@@ -47,7 +47,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/6 bg-[#04050a]">
+      <div className="border-t border-white/10 bg-[#04050a]">
         <div className="mx-auto max-w-7xl px-6 py-4 lg:px-8">
           <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
             <p className="text-sm text-white/60">© 2026 Zenin AI. All rights reserved.</p>

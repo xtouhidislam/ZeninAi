@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 
 const navItems = [
   { label: "Services", target: "services" },
-  { label: "How It Works", target: "how-it-works" },
+  { label: "How It Works", target: "process" },
   { label: "Case Studies", target: "case-studies" },
   { label: "Pricing", target: "pricing" },
   { label: "Contact", target: "contact" },
@@ -55,7 +55,7 @@ export default function Navbar() {
   return (
     <nav className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled ? "border-b border-white/10 bg-black/70 backdrop-blur-xl" : "bg-transparent"}`}>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 transition-colors duration-300 lg:px-8">
-        <button className="flex items-center gap-3 text-lg font-semibold tracking-tight text-white sm:text-xl" onClick={() => handleNavClick("services")}
+        <button className="flex items-center gap-3 text-lg font-semibold tracking-tight text-[color:var(--text-primary)] sm:text-xl" onClick={() => handleNavClick("services")}
           aria-label="Scroll to top">
           <img src="/zeninai_logo.png" alt="Zenin AI logo" className="h-8 w-auto sm:h-9" />
           <span className="hidden sm:inline">Zenin AI</span>
@@ -67,7 +67,7 @@ export default function Navbar() {
               key={item.target}
               type="button"
               onClick={() => handleNavClick(item.target)}
-              className={`text-sm font-medium transition ${activeSection === item.target ? "text-white" : "text-text-secondary hover:text-white"}`}
+              className={`text-sm font-medium transition ${activeSection === item.target ? "text-[color:var(--text-primary)]" : "text-[color:var(--text-secondary)] hover:text-[color:var(--text-primary)]"}`}
             >
               {item.label}
             </button>
@@ -119,7 +119,7 @@ export default function Navbar() {
               key={item.target}
               type="button"
               onClick={() => handleNavClick(item.target)}
-              className={`w-full text-left text-base font-medium transition ${activeSection === item.target ? "text-white" : "text-text-secondary hover:text-white"}`}
+              className={`w-full text-left text-base font-medium transition ${activeSection === item.target ? "text-[color:var(--text-primary)]" : "text-[color:var(--text-secondary)] hover:text-[color:var(--text-primary)]"}`}
             >
               {item.label}
             </button>
